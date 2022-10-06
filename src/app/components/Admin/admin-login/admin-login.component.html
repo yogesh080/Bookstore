@@ -1,0 +1,25 @@
+<div class="main-component" fxLayoutAlign="center center">
+
+    <div class="form-container" fxLayout="row">
+        <div class="login-container">
+            
+            <h2 fxLayoutAlign="space-around center" > ADMIN-LOGIN </h2>
+          
+            <form action="" fxLayout="column" fxLayoutAlign="space-between" [formGroup]="AdminloginForm">
+
+                <label for="email">Admin Email:</label>
+                <input type="email" required formControlName="adminEmail" ><br>
+
+                <label for="password">Admin Password:</label>
+                <input type="password" formControlName="adminPassword" ><br>
+
+                <div class="example-button-row">
+                    <button class="login-primary" (click)="onSubmit()" >LOGIN</button>
+                </div>
+
+            </form><br><br>
+        </div>
+    </div>
+
+
+</div>

@@ -18,6 +18,7 @@ import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { AdminLoginComponent } from './components/Admin/admin-login/admin-login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     RegistrationComponent,
     LoginComponent,
     ForgetPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,

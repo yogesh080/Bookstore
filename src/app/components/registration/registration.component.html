@@ -1,0 +1,42 @@
+<div class="main-component" fxLayoutAlign="center center">
+    <div>
+        <img style="width:300px ;" src="../../../assets/assets/OnlineBooklogin.png" alt="">
+    </div>
+
+    <div class="form-container"  fxLayout="row">
+        <div class="signup-container">
+            <div>
+                <button class="heading" routerLink="/login">
+                    <h2> LOGIN </h2>
+                </button>
+
+                <button class="heading">
+                    <h2>SIGNUP</h2>
+                </button>
+            </div>
+
+            <form [formGroup]="registerForm" action="" fxLayout="column" fxLayoutAlign="space-between">
+                
+                <label for="fname">Full name:</label>
+                <input type="text" required formControlName="fullName"><br>
+
+                <label for="email">Email:</label>
+                <input type="email" required formControlName="email"><br>
+
+                <label for="password">Password:</label>
+                <input type="password" formControlName="password"><br>
+
+                <label for="phone">Mobile Number:</label>
+                <input type="tel" formControlName="mobileNumber"><br>
+
+                <div class="example-button-row">
+                    <button class="signup-primary" (click)="onSubmit()" >SIGN UP</button>
+                </div><br><br>
+
+            </form>
+
+        </div>
+    </div>
+
+
+</div>

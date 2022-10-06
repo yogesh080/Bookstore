@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserServiceService } from 'src/app/services/userServices/userservice.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  loginForm: FormGroup;
+  submitted = false;
 
-  ngOnInit(): void {
+  constructor( private formBuilder: FormBuilder,private user: UserServiceService) { }
+
+  ngOnInit() {
+    this.loginForm = this.formBuilder.group({   
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
+    }
+    );
+  }
+
+  // convenience getter for easy access to form fields
+  get f() { return this.loginForm.controls; }
+
+  onSubmit() {
+    this.submitted = true;
+
+    // stop here if form is invalid
+    if (this.loginForm.valid) {
+      let reqdata ={
+        Email: this.loginForm.value.email,
+        Password: this.loginForm.value.password
+      }
+      this.user.login(reqdata).subscribe((response:any) => {
+        console.log(response)
+
+      }, error => {
+        console.log(error)
+      }
+      )
+    }
+
+    
   }
 
 }

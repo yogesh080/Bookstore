@@ -15,16 +15,16 @@
                 </button>
             </div>
 
-            <form action="" fxLayout="column" fxLayoutAlign="space-between">
+            <form action="" fxLayout="column" fxLayoutAlign="space-between" [formGroup]="loginForm">
 
                 <label for="email">Email:</label>
-                <input type="email" required><br>
+                <input type="email" required formControlName="email"><br>
 
                 <label for="password">Password:</label>
-                <input type="password"><br>
+                <input type="password" formControlName="password"><br>
 
                 <div class="example-button-row">
-                    <button class="login-primary">LOGIN</button>
+                    <button class="login-primary" (click)="onSubmit()">LOGIN</button>
                 </div>
 
             </form><br><br>

@@ -24,5 +24,25 @@ export class UserServiceService {
     console.log(reqdata);
     return this.httpService.postService('/User/Register', reqdata, false, header)
    }
+
+
+
+   forgetPassword(reqdata:any)
+  {
+    console.log(reqdata);
+
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json'
+      })
+    }
+    console.log(reqdata);
+
+    return this.httpService.postService(`/User/ForgetPassword?Email=${reqdata.Email}`,reqdata,false,header)
+  }
+
+
+
+
 }
 

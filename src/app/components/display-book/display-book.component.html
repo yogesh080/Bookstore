@@ -1,36 +1,85 @@
-<div fxLayout="column">
+<div class="main-container" fxLayout="column">
     <div fxFlex="100" class="header">
         <div fxFlex="72" class="allbooks">
             <h2>Books</h2>
         </div>
         <div class="sort">
-            <button class="sort-btn" mat-button [matMenuTriggerFor]="menu"><span > Sort by relevence</span><mat-icon>keyboard_arrow_down</mat-icon></button>
+            <button class="sort-btn" mat-button [matMenuTriggerFor]="menu"><span> Sort by relevence</span>
+                <mat-icon>keyboard_arrow_down</mat-icon>
+            </button>
             <mat-menu #menu="matMenu">
                 <button mat-menu-item>Item 1</button>
                 <button mat-menu-item>Item 2</button>
             </mat-menu>
         </div>
     </div>
+</div>
 
+<div>
+<div class="display-container"  >
+    <div *ngFor="let book of BookArray" fxFlex>
+        <mat-card  class="display">
+            <div class="book-img" fxLayoutAlign="space-around center">
+                <img width="140px" src="../../../assets/assets/mitrokin.jpg" alt="">
+            </div><br>
+            <div>
+                <mat-card-title class="book-title"> {{book.bookName}}</mat-card-title>
+                <mat-card-title class="author">By: {{book.author}}</mat-card-title>
+            </div>
 
-    <div class="display-container">
-        <div *ngFor="let book of BookArray">
-            <mat-card fxFlex="24">
-                <div class="book-img" fxLayoutAlign="space-around center">
-                    <img width="140px" src="../../../assets/assets/mitrokin.jpg" alt="">
-                </div><br>
-                <div>
-                    <mat-card-title class="book-title"> {{book.bookName}}</mat-card-title>
-                    <mat-card-title class="author">By: {{book.author}}</mat-card-title>
+            <div class="rating" fxLayout="row">
+                <div class="badge">4.5<img width="15px" style="margin-top: 1px;" src="../../../assets/assets/star.svg ">
                 </div>
+                <div style="color:black;margin-left: 4px;"> (20) </div>
+            </div>
+            <div class="price"> <strong>Rs. 600 </strong><span class="discountedprice"> Rs. 300 </span></div>
+        </mat-card>
+    </div>
+</div>
 
-                <div class="rating" fxLayout="row">
-                    <div class="badge">4.5<img width="15px" style="margin-top: 1px;"
-                            src="../../../assets/assets/star.svg "> </div>
-                    <div style="color:black;margin-left: 4px;"> (20) </div>
-                </div>
-                <div class="price"> <strong>Rs. 600 </strong><span class="discountedprice"> Rs. 300 </span></div>
-            </mat-card>
+
+
+
+<!-- <div class="baseFlex">
+    <div class="basetext">Books<span style="color:rgb(172, 169, 169);margin-left:3px;">({{BooksList.length}}
+            items)</span></div>
+
+    <div class="rightflex">
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Sort by relevance</mat-label>
+                <mat-select class="matselect">
+                    <mat-option clicked (click)="newestarrivals()" value="third">Newest Arrivals</mat-option>
+                    <mat-option (click)="lowtohigh()" value="one">Price:Low to High</mat-option>
+                    <mat-option (click)=" hightolow()" value="two">Price:High to Low</mat-option>
+                </mat-select>
+            </mat-form-field>
         </div>
     </div>
 </div>
+
+<div class="container">
+
+
+    <div class="note" *ngFor="let book of BooksList  | pipefilterdata : searchWord ">
+        <div (click)="bookid(book)">
+
+            <mat-card class="example-card">
+                <div class="card-title "> <img src={{book.bookImage}} class="productimage" /></div>
+
+                <div class="abc">
+                    <mat-card-title class="card-title product">{{book.bookName}}</mat-card-title>
+                    <mat-card-title class="author">By {{book.authorName}}</mat-card-title>
+
+                    <div class="ratingbadge">
+                        <div class="badge">{{book.totalRating}} <img src="../../../assets/starr.png" class=star> </div>
+                        <div style="color:black;margin-left: 4px;">({{book.ratingCount}}) </div>
+                    </div>
+
+                    <div class="price"> <strong>Rs. {{book.discountedPrice}} /-</strong> <span class="discountedprice">
+                            Rs. {{book.actualPrice}}</span></div>
+                </div><br>
+            </mat-card>
+        </div>
+    </div>
+</div> -->

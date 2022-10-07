@@ -1,0 +1,67 @@
+
+
+.mat-toolbar{
+  background-color:rgb(165, 29, 29);
+}
+
+.logo{
+    margin-left: 6%;
+}
+
+.example-spacer{
+    color: #fff;
+
+}
+
+
+.search-area{
+    background:#f1f3f4;
+    border: none;
+    margin-left: 55px;
+    // margin-right: -493px;
+    width: 692px;
+    height: 44px;
+    border-radius: 8px;
+  }
+  
+  input{
+    &:focus { 
+      outline: none !important;
+      }
+  }
+  .tooltip{
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center;
+    align-items: unset;
+  }
+  
+  .tooltip input{
+    border: none;
+    margin-bottom:2px;
+    // border: 1px solid red;
+    padding: 0px 12px;
+    background:#f1f3f4;
+    border-radius: 7px;
+    width: 117%;
+    font-size:  18px;
+    height: 36px;
+
+}
+
+button{
+    font-size: 45px;
+    width: 80px;
+    background-color: rgb(165, 29, 29);
+    border-top-width: 0px;
+    border-right-width: 1px;
+    border-bottom-width: 0px;
+    border-left-width: 1px;
+    border-color: #0000001a;
+} ;
+
+
+.header-btn{
+    margin-left: 10%;
+}

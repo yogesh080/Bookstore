@@ -1,0 +1,42 @@
+<div class="main-container">
+    <div class="header" fxFlex="100">
+        <mat-toolbar>
+            <mat-toolbar-row>
+                <div class="logo">
+                    <img style="margin-right: 12%; margin-block: -2px;" src="../../../assets/assets/book.svg" alt="" />
+                    <span class="example-spacer">BookStore</span>
+                </div>
+
+                <div class="search-area" fxFlex="50">
+                    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="2px" class="tooltip">
+                        <img style="width: 24px; padding-left: 19px; height: 45px"
+                            src="../../../assets/assets/searchsvg.svg" />
+                        <input type="text" placeholder="Search" />
+                    </div>
+                </div>
+                <div class="header-btn" fxLayout="row"   >
+                    <div class="set-profile">
+                        <button mat-icon-button class="header-icon" mat-button [matMenuTriggerFor]="menu">
+                            <img style="width: 27px" src="../../../assets/assets/profile.svg" />
+                        </button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item>Item 1</button>
+                            <button mat-menu-item>Item 2</button>
+                        </mat-menu>
+                    </div>
+                    <div class="cart-btn">
+                        <button mat-icon-button class="header-icon">
+                            <img style="width: 27px" src="../../../assets/assets/addTocart.svg" />
+                        </button>
+                    </div>
+                </div>
+            </mat-toolbar-row>
+        </mat-toolbar>
+
+        <div>
+            <router-outlet >
+      
+            </router-outlet>
+        </div>
+    </div>
+</div>

@@ -4,8 +4,8 @@
             <h2>Books</h2>
         </div>
         <div class="sort">
-            <button class="sort-btn" mat-button [matMenuTriggerFor]="menu"><span> Sort by relevence</span>
-                <mat-icon>keyboard_arrow_down</mat-icon>
+            <button class="sort-btn" mat-button [matMenuTriggerFor]="menu"><span class="span-sort"> Sort by relevence</span>
+                <mat-icon style="height: 16px;">keyboard_arrow_down</mat-icon>
             </button>
             <mat-menu #menu="matMenu">
                 <button mat-menu-item>Item 1</button>
@@ -16,7 +16,7 @@
 </div>
 
 <div>
-<div class="display-container"  >
+<div class="display-container" >
     <div *ngFor="let book of BookArray" fxFlex>
         <mat-card  class="display">
             <div class="book-img" fxLayoutAlign="space-around center">

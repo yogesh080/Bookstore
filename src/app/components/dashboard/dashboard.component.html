@@ -19,9 +19,19 @@
                         <button mat-icon-button class="header-icon" mat-button [matMenuTriggerFor]="menu">
                             <img style="width: 27px" src="../../../assets/assets/profile.svg" />
                         </button>
-                        <mat-menu #menu="matMenu">
-                            <button mat-menu-item>Item 1</button>
-                            <button mat-menu-item>Item 2</button>
+                        <mat-menu class="mat-menu" #menu="matMenu">
+                            <h3><strong> Welcome </strong></h3>
+                            <p> To access your account and manage Orders</p>
+                            <button class="mat-menu-signin" routerLink="/registration"> LOGIN/SIGNUP</button>
+                            <hr>
+                            <button mat-menu-item >
+                                <mat-icon>collections_bookmark</mat-icon>
+                                <span>My Orders</span>
+                              </button>
+                              <button mat-menu-item>
+                                <mat-icon>favorite_border</mat-icon>
+                                <span>Wish list</span>
+                            </button>
                         </mat-menu>
                     </div>
                     <div class="cart-btn">

@@ -17,6 +17,12 @@ mat-card{
     background-color: rgba(168, 164, 164, 0.562);
 }
 
+.sort-btn{
+    background-color: white;
+    border: solid gray 1px;
+    border-radius: 4px 4px 4px 4px;
+}
+
 .allbooks{
     margin-left: 7%;
 }
@@ -31,4 +37,7 @@ mat-card{
 .badge{
     background-color: green;
     color: white;
+}
+.price{
+    margin-top: 2px;
 }

@@ -20,7 +20,7 @@
     margin-left: 55px;
     // margin-right: -493px;
     width: 692px;
-    height: 44px;
+    height: 40px;
     border-radius: 8px;
   }
   
@@ -50,7 +50,7 @@
 
 }
 
-button{
+.header-icon{
     font-size: 45px;
     width: 80px;
     background-color: rgb(165, 29, 29);
@@ -59,7 +59,21 @@ button{
     border-bottom-width: 0px;
     border-left-width: 1px;
     border-color: #0000001a;
-} ;
+}
+
+.mat-menu-signin{
+  width: 138px;
+  height: 40px;
+  background-color: #fff;
+  border: solid rgb(218, 25, 25) 1px;
+  color: rgb(165, 29, 29);
+  border-radius: 8px 8px 8px 8px;
+}
+
+::ng-deep .mat-menu{
+  padding: 15px 15px 15px 15px;
+}
+
 
 
 .header-btn{

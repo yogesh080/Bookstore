@@ -30,6 +30,7 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 import { AdminLoginComponent } from './components/Admin/admin-login/admin-login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DisplayBookComponent } from './components/display-book/display-book.component';
+import { GetAllBooksComponent } from './components/get-all-books/get-all-books.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { DisplayBookComponent } from './components/display-book/display-book.com
     ResetPasswordComponent,
     AdminLoginComponent,
     DashboardComponent,
-    DisplayBookComponent
+    DisplayBookComponent,
+    GetAllBooksComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 .display-container{
-    border:solid greenyellow 2px;
+    // border:solid greenyellow 2px;
     width: 85%;
     margin-left: 7%;
     flex-flow: wrap;
@@ -7,9 +7,9 @@
 
 }
 
-.display{
-    border: solid red 2px;
-}
+// .display{
+//     border: solid red 2px;
+// }
 
 mat-card{
     border: black;
@@ -54,4 +54,8 @@ mat-card{
 }
 .price{
     margin-top: 2px;
+}
+
+.discountedprice{
+    text-decoration: line-through;
 }

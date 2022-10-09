@@ -5,6 +5,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DisplayBookComponent } from './components/display-book/display-book.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { GetAllBooksComponent } from './components/get-all-books/get-all-books.component';
+import { GetWishListComponent } from './components/get-wish-list/get-wish-list.component';
+import { GetbookbyIdComponent } from './components/getbookby-id/getbookby-id.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
@@ -17,9 +19,9 @@ const routes: Routes = [
   {path:'adminlogin', component:AdminLoginComponent},
   {path:'dashboard', component:DashboardComponent,
   children:[
-    {path:'displaybook', component:GetAllBooksComponent,
-    // children:[{path:'book', component:GetAllBooksComponent}]
-  }
+    {path:'displaybook', component:GetAllBooksComponent  },
+    {path:'wishlist', component:GetWishListComponent},
+    {path:'book', component:GetbookbyIdComponent}
   ]}
 ];
 

@@ -12,6 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule} from '@angular/material/menu';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -31,6 +32,8 @@ import { AdminLoginComponent } from './components/Admin/admin-login/admin-login.
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DisplayBookComponent } from './components/display-book/display-book.component';
 import { GetAllBooksComponent } from './components/get-all-books/get-all-books.component';
+import { GetWishListComponent } from './components/get-wish-list/get-wish-list.component';
+import { GetbookbyIdComponent } from './components/getbookby-id/getbookby-id.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,9 @@ import { GetAllBooksComponent } from './components/get-all-books/get-all-books.c
     AdminLoginComponent,
     DashboardComponent,
     DisplayBookComponent,
-    GetAllBooksComponent
+    GetAllBooksComponent,
+    GetWishListComponent,
+    GetbookbyIdComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +62,8 @@ import { GetAllBooksComponent } from './components/get-all-books/get-all-books.c
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,40 @@
+.bookwishlist{
+    margin-top: 8px;
+    margin-left: 4px
+}
+
+.header{
+    margin-top: 2%;
+    margin-left: 7%;
+}
+
+.title{
+    background-color: rgba(128, 128, 128, 0.63);
+    width: 78%;
+    margin-left: 7%;
+}
+
+.booklist{
+    background-color: white;
+    width: 78%;
+    margin-left: 7%;
+}
+
+.bookname{
+    margin-left: 2%;
+}
+.author{
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.479);
+}
+.price{
+    margin-top: 2px;
+}
+
+.discountedprice{
+    text-decoration: line-through;
+}
+.delete{
+    margin-inline-start: auto;
+
+}

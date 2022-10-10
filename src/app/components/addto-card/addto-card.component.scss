@@ -1,0 +1,64 @@
+.title{
+    width: 78%;
+    margin-left: 7%;
+    border-radius: 0px
+
+}
+
+.bookwishlist{
+    margin-top: 8px;
+    margin-left: 4px
+}
+
+.header{
+    margin-top: 2%;
+    margin-left: 7%;
+}
+
+.booklist{
+    background-color: white;
+    width: 78%;
+    margin-left: 7%;
+    border-radius: 0px
+}
+
+.bookname{
+    margin-left: 6%;
+}
+
+.book-title{
+    font-size: 17px;
+}
+.author{
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.479);
+}
+.price{
+    margin-top: 2px;
+}
+
+.discountedprice{
+    text-decoration: line-through;
+    padding: 2px;
+    margin-left: 8px;
+}
+
+.round-btn{
+    border-radius: 50%;
+    border: solid #80808082 1px;
+    width: 4%;
+    height: 23px;
+}
+.display-btn{
+    margin: 0px 6px 0px 6px;
+}
+
+.count-btn{
+    margin-left: 15%;
+}
+
+.remove-btn{
+    margin-left: 8%;
+    background-color: white;
+    border: none;
+}

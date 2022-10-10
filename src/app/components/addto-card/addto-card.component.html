@@ -1,0 +1,37 @@
+<div class="header-container" fxLayout="column">
+    <div fxFlex="100" class="header">
+        <div fxFlex="72" class="allbooks" fxLayout="row">
+            <h2>Home</h2>
+            <span class="bookwishlist">/My card</span>
+        </div>
+    </div>
+
+    <div>
+        <mat-card class="title">
+            <mat-card-title>My Cart ({{cartList.length}})</mat-card-title>
+        </mat-card>
+        <div *ngFor="let book of cartList">
+            <mat-card  class="booklist">
+                <div class="" fxLayout="row">
+                    <img width="60px" src="{{book.bookImage}}" alt="">
+                    <div class="bookname">
+                        <mat-card-title class="book-title">{{book.bookName}}</mat-card-title>
+                        <mat-card-title class="author">By: {{book.author}}</mat-card-title>
+                        <div fxLayout="row">
+                            <div class="price"><strong> Rs. {{book.price}} </strong></div>
+                            <div class="discountedprice"> Rs. {{book.discountedPrice}} </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="count-btn">
+                    <button style="color: black;" mat-mini-fab disabled
+                        aria-label="Example icon button with a home icon">-</button>
+                    <button style="color: black;" mat-flat-button disabled class="display-btn">1</button>
+                    <button style="color: black;" mat-mini-fab disabled
+                        aria-label="Example icon button with a home icon">+</button>
+                    <button class="remove-btn" (click)="deletefromCard(book)">Remove</button>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

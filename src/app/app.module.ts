@@ -34,6 +34,7 @@ import { DisplayBookComponent } from './components/display-book/display-book.com
 import { GetAllBooksComponent } from './components/get-all-books/get-all-books.component';
 import { GetWishListComponent } from './components/get-wish-list/get-wish-list.component';
 import { GetbookbyIdComponent } from './components/getbookby-id/getbookby-id.component';
+import { AddtoCardComponent } from './components/addto-card/addto-card.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { GetbookbyIdComponent } from './components/getbookby-id/getbookby-id.com
     DisplayBookComponent,
     GetAllBooksComponent,
     GetWishListComponent,
-    GetbookbyIdComponent
+    GetbookbyIdComponent,
+    AddtoCardComponent
   ],
   imports: [
     BrowserModule,

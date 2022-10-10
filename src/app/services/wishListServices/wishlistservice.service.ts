@@ -42,6 +42,7 @@ export class WishlistserviceService {
   }
 
   addtoWishList(bookId:any){
+    console.log("cool")
     let header = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',

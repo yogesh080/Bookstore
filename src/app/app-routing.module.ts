@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddtoCardComponent } from './components/addto-card/addto-card.component';
 import { AdminLoginComponent } from './components/Admin/admin-login/admin-login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DisplayBookComponent } from './components/display-book/display-book.component';
@@ -21,7 +22,8 @@ const routes: Routes = [
   children:[
     {path:'displaybook', component:GetAllBooksComponent  },
     {path:'wishlist', component:GetWishListComponent},
-    {path:'book', component:GetbookbyIdComponent}
+    {path:'book', component:GetbookbyIdComponent},
+    {path:'cart', component:AddtoCardComponent}
   ]}
 ];
 

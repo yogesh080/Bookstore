@@ -4,7 +4,7 @@
 }
 
 .header{
-    margin-top: 2%;
+    margin-top: 1%;
     margin-left: 7%;
 }
 
@@ -45,4 +45,53 @@
 }
 .person-review{
     margin-left: 3%;
+    margin-bottom: 15%;
 }
+
+.image-border{
+    border: solid rgba(172, 168, 168, 0.199) 1px;
+    padding: 10px 30px 40px 30px;
+    margin-left: 93px;
+}
+
+.addtobag-btn{
+    background-color: rgb(165, 29, 29);
+    color: white;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+
+}
+.addtoWishlist-btn{
+    background-color: rgba(0, 0, 0, 0.808);
+    color: white;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+
+}
+
+.badge{
+    background-color: green;
+    color: white;
+}
+hr{
+    margin: 20px 0px 20px 0px;
+}
+
+.primary-btn{
+    height:32px ;
+    margin-left: 81%;
+    position: relative;
+    // float:right;
+}
+
+
+@media(max-width:755px){
+
+    .primary-btn{
+        margin-left: 0%;
+
+    }
+    
+}  
+
+

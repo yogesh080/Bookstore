@@ -7,16 +7,30 @@
     </div>
 
     <div fxFlex="100" class="book-container">
-        <div fxLayout="row" fxLayoutAlign="center">
-            <mat-card class="booklist">
-                <div class="">
+        <div fxLayout="row">
+            <div class="booklist">
+                <div class="image-border">
                     <img width="220px" src="../../../assets/assets/mitrokin.jpg" alt="">
                 </div>
-            </mat-card>
+                <div fxLayout="row" fxLayoutAlign="space-around" style="margin-left: 18%; margin-top: 4%;">
+                    <button class="addtobag-btn">
+                        ADD TO BAG
+                    </button>
+                    <button class="addtoWishlist-btn" fxLayoutAlign="center" >
+                        <mat-icon width="20px" >favorite_border</mat-icon>
+                        <span fxLayoutAlign="center" style="margin: 5px;">WISHLIST</span>
+                    </button>
+                </div>
+            </div>
             <mat-card class="bookname">
                 <div>
                     <mat-card-title class="book-title">Book-name</mat-card-title>
                     <mat-card-title class="author">By: </mat-card-title>
+                    <div class="rating" fxLayout="row">
+                        <div class="badge">4.5<img width="15px"  src="../../../assets/assets/star.svg ">
+                        </div>
+                        <div style="color:black;"> (20) </div>
+                    </div>
                     <div class="price"><strong> Rs. </strong></div>
                     <span class="discountedprice"> Rs. </span>
                     <hr>
@@ -27,23 +41,25 @@
                         submitting.</p>
                     <hr>
                     <div>
-                        <mat-card-title>Cusomer FeedBack</mat-card-title>
+                        <mat-card-title>Customer Feedback</mat-card-title>
                         <mat-card class="feedback">
                             <div>Overall rating</div>
-                            <div >
+                            <div>
                                 <img width="25px" src="../../../assets/assets/feedbackstar.svg" alt="">
                                 <img width="25px" src="../../../assets/assets/feedbackstar.svg" alt="">
                                 <img width="25px" src="../../../assets/assets/feedbackstar.svg" alt="">
                                 <img width="25px" src="../../../assets/assets/feedbackstar.svg" alt="">
                                 <img width="25px" src="../../../assets/assets/feedbackstar.svg" alt="">
                             </div>
-                            <textarea class="feedbackarea" placeholder="Write a review " style="font-size: 15px; border: none;"></textarea>
-                            <button mat-raised-button color="primary" style="height:32px ; margin-left: 81%;">Submit</button>
+                            <textarea class="feedbackarea" placeholder="Write a review "
+                                style="font-size: 15px; border: none;"></textarea>
+                            <button mat-raised-button color="primary" class="primary-btn">Submit</button>
                         </mat-card>
                     </div><br>
-                    <div  fxLayout="row" >
-                        <img width="20px" width="20px"src="../../../assets/assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg" alt="">
-                            <span class="profilename">Person Name</span>
+                    <div fxLayout="row">
+                        <img width="20px" width="20px"
+                            src="../../../assets/assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                        <span class="profilename">Person Name</span>
                     </div>
                     <div class="logofeedback">
                         <img width="20px" src="../../../assets/assets/feedbackstar.svg" alt="">
@@ -52,7 +68,9 @@
                         <img width="20px" src="../../../assets/assets/feedbackstar.svg" alt="">
                         <img width="20px" src="../../../assets/assets/feedbackstar.svg" alt="">
                     </div>
-                    <p class="person-review"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto nemo amet rem corporis consectetur reiciendis?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque commodi et nulla iure numquam obcaecati.</p>
+                    <p class="person-review"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto nemo
+                        amet rem corporis consectetur reiciendis?Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Doloremque commodi et nulla iure numquam obcaecati.</p>
 
                 </div>
             </mat-card>

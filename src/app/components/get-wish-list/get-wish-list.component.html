@@ -13,7 +13,7 @@
         <div *ngFor="let book of wishList">
             <mat-card class="booklist">
                 <div class="" fxLayout="row">
-                    <img width="60px" src="../../../assets/assets/mitrokin.jpg" alt="">
+                    <img width="60px" src="{{book.bookImage}}" alt="">
                     <div class="bookname">
                         <mat-card-title class="book-title">{{book.bookName}}</mat-card-title>
                         <mat-card-title class="author">By: {{book.author}}</mat-card-title>
@@ -22,7 +22,7 @@
                     </div>
 
                     <div class="delete" (click)="deletewishlist(book)">
-                        <img width="25px" src="../../../assets/assets/delete.svg" alt="">
+                        <img width="25px" src="../../../assets/assets/delete_FILL0_wght400_GRAD0_opsz48.svg" alt="">
                     </div>
                 </div>
             </mat-card>

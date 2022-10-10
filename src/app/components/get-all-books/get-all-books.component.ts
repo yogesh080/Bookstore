@@ -26,5 +26,13 @@ export class GetAllBooksComponent implements OnInit {
       console.log(this.BookList)
 
     })
+
+  
 }
+
+getallBooksbyid(){
+
+  console.log("get book by id")
+    
+} 
 }

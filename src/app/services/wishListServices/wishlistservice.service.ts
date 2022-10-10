@@ -40,4 +40,16 @@ export class WishlistserviceService {
     return this.httpService.deleteservices(`/WishList/DeleteFromWishList?WishListId=${wishListId}`, true, header)
 
   }
+
+  addtoWishList(bookId:any){
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': "Bearer " + this.token
+
+      })
+
+    }
+  return this.httpService.postService('/WishList/AddToWishList',bookId,true,header)
+  }
 }

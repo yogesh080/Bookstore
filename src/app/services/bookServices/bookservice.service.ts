@@ -28,6 +28,7 @@ export class BookserviceService {
   }
 
   bookidbyid(BookId: any) {
+    console.log("hello")
     console.log(BookId);
     let header = {
       headers: new HttpHeaders({
@@ -35,7 +36,7 @@ export class BookserviceService {
         'Authorization': "Bearer " + this.token
       })
     }
-    return this.httpService.GetService(`/BookDetail/GetBookById?BookId${BookId}`, true, header);
+    return this.httpService.GetService(`/BookDetail/GetBookById?BookId=${BookId}`, true, header);
   }
 
   addtocart(reqdata:any){

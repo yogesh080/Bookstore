@@ -11,24 +11,28 @@ export class GetbookbyIdComponent implements OnInit {
 
   Book:any;
   wishList: any;
-  book:any;
+  bookId:any;
+  getbook:any
   
 
   constructor(private getBook: BookserviceService, private wishlist: WishlistserviceService) { }
 
   ngOnInit(): void {
-
-
+    
+    this.Book=localStorage.getItem('bookid')
+    console.log(this.Book);
     this.getbookid();
+
+
     
   }
 
   getbookid(){
-    console.log("got all notes")
-    this.getBook.getallbook().subscribe((response:any)=>{
+    console.log("got book id ", this.Book)
+    this.getBook.bookidbyid(this.Book).subscribe((response:any)=>{
       console.log(response)
-      this.Book = response.data;
-      console.log(this.Book)
+      this.getBook = response.data;
+      console.log(this.getBook)
 
     })
   }

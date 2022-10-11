@@ -51,6 +51,31 @@ export class BookserviceService {
     return this.httpService.postService('/AddCart/AddToCart', reqdata, true, header)
   }
 
+  addFeadback(reqdata:any)
+  {
+    let header={
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': "Bearer " + this.token
+      })
+    }
+      console.log("Add FeedBack");
+      return this.httpService.postService('/AddFeedBack/AddFeedback',reqdata,true,header);
+  }
+
+
+  getfeedBack(bookId:any)
+  {
+    let header={
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': "Bearer " + this.token
+      })
+    }
+      console.log("Get FeedBack");
+      return this.httpService.GetService(`/AddFeedBack/GetAllFeedbacks?BookId=${bookId}`,true,header);
+  }
+
 
 
 

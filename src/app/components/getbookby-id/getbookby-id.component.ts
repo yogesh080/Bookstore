@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { BookserviceService } from 'src/app/services/bookServices/bookservice.service';
 import { WishlistserviceService } from 'src/app/services/wishListServices/wishlistservice.service';
+
+
 
 @Component({
   selector: 'app-getbookby-id',
@@ -12,16 +15,22 @@ export class GetbookbyIdComponent implements OnInit {
   Book:any;
   wishList: any;
   bookId:any;
-  getbook:any
+  getbook:any;
+  totalRating:any;
+  comment:any;
+  booksArr:any;
+
+
   
 
-  constructor(private getBook: BookserviceService, private wishlist: WishlistserviceService) { }
+  constructor(private getBook: BookserviceService, private wishlist: WishlistserviceService, private snack: MatSnackBar) { }
 
   ngOnInit(): void {
     
     this.Book=localStorage.getItem('bookid')
     console.log(this.Book);
     this.getbookid();
+    this.getFeedback();
 
 
     
@@ -31,7 +40,7 @@ export class GetbookbyIdComponent implements OnInit {
     console.log("got book id ", this.Book)
     this.getBook.bookidbyid(this.Book).subscribe((response:any)=>{
       console.log(response)
-      this.getBook = response.data;
+      this.getbook = response.data;
       console.log(this.getBook)
 
     })
@@ -61,8 +70,44 @@ export class GetbookbyIdComponent implements OnInit {
     })
   }
 
+  //feedback
 
+  addFeedback(getbook:any) {
+    let data = {
+      TotalRating: parseFloat(this.totalRating),
+      Comment: this.comment,
+      BookId: getbook.bookId,
+    };
 
+    console.log(data);
+
+    this.getBook.addFeadback(data).subscribe(
+      (response: any) => {
+        console.log('User Feedback', response);
   
+        this.snack.open('add feedback  Successfull', '', {
+          duration: 3000,
+        })
+        this.getFeedback();
+      },
+      (error: any) => {
+        console.log(error);
+      }
+    );
+  }
+
+
+  getFeedback() {
+    
+    console.log("Get feedback ====>")
+    console.log(this.Book);
+
+    this.getBook.getfeedBack(this.Book).subscribe((response: any) => {
+    
+      console.log(response);
+      this.booksArr=response.data;
+      console.log(this.booksArr);
+    });
+  }
 
 }

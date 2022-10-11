@@ -35,6 +35,8 @@ import { GetAllBooksComponent } from './components/get-all-books/get-all-books.c
 import { GetWishListComponent } from './components/get-wish-list/get-wish-list.component';
 import { GetbookbyIdComponent } from './components/getbookby-id/getbookby-id.component';
 import { AddtoCardComponent } from './components/addto-card/addto-card.component';
+import { AddressComponentComponent } from './components/address-component/address-component.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar'; 
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { AddtoCardComponent } from './components/addto-card/addto-card.component
     GetAllBooksComponent,
     GetWishListComponent,
     GetbookbyIdComponent,
-    AddtoCardComponent
+    AddtoCardComponent,
+    AddressComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +68,9 @@ import { AddtoCardComponent } from './components/addto-card/addto-card.component
     MatIconModule,
     MatCardModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

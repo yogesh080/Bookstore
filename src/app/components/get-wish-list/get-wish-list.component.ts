@@ -1,6 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+
+import { MatSnackBar } from '@angular/material/snack-bar';
+
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { WishlistserviceService } from 'src/app/services/wishListServices/wishlistservice.service';
+
 
 @Component({
   selector: 'app-get-wish-list',
@@ -11,7 +16,10 @@ export class GetWishListComponent implements OnInit {
 
   wishList: any;
 
-  constructor( private wishlist: WishlistserviceService) { }
+  // @Output() DeleteEvent = new EventEmitter<string>();
+
+
+  constructor( private wishlist: WishlistserviceService, private route: ActivatedRoute,private snackbar:MatSnackBar) { }
 
   ngOnInit(): void {
     this.getwishlist();
@@ -39,6 +47,12 @@ export class GetWishListComponent implements OnInit {
     console.log(data.wishListId)
     this.wishlist.deleteWishList(data.wishListId).subscribe((response:any) => {
       console.log(response)
+
+      this.snackbar.open("Book Remove Successfully","" ,{
+        duration: 2000,
+      });
+      this.getwishlist();
+      // this.DeleteEvent.emit(response)
     })
   }
 

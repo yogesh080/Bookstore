@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { BookserviceService } from 'src/app/services/bookServices/bookservice.service';
 
 @Component({
@@ -9,6 +9,8 @@ import { BookserviceService } from 'src/app/services/bookServices/bookservice.se
 export class GetAllBooksComponent implements OnInit {
 
   BookList=[]
+
+  @Output() DeleteEvent = new EventEmitter<string>();
 
   constructor(private getBook: BookserviceService) { }
 
@@ -35,4 +37,5 @@ getallBooksbyid(){
   console.log("get book by id")
     
 } 
+
 }

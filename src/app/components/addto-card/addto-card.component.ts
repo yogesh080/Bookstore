@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AddcartserviceService } from 'src/app/services/addcartService/addcartservice.service';
 import { AddressServiceService } from 'src/app/services/addressService/address-service.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-addto-card',
@@ -13,7 +15,7 @@ export class AddtoCardComponent implements OnInit {
   CardId: any;
   adqnt: any;
 
-  constructor(private cartlist: AddcartserviceService,private address: AddressServiceService) { }
+  constructor(private cartlist: AddcartserviceService,private address: AddressServiceService,private snackbar:MatSnackBar) { }
 
   ngOnInit(): void {
     this.getallAddCard()
@@ -36,6 +38,10 @@ export class AddtoCardComponent implements OnInit {
     console.log(data.cartId)
     this.cartlist.deleteCard(data.cartId).subscribe((response: any) => {
       console.log(response)
+      this.snackbar.open("Book Remove Successfully","" ,{
+        duration: 1000,
+      });
+      this.getallAddCard();
     })
 
   }

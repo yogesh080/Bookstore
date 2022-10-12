@@ -30,8 +30,6 @@ export class GetbookbyIdComponent implements OnInit {
     console.log(this.Book);
     this.getbookid();
     this.getFeedback();
-
-
     
   }
 
@@ -56,8 +54,11 @@ export class GetbookbyIdComponent implements OnInit {
     console.log(data.bookId)
     this.wishlist.addtoWishList(reqdata).subscribe((response:any) => {
       console.log(response)
+      this.snack.open("added to wishlist ","" ,{
+        duration: 1000,
     })
-  }
+    this.getbookid();
+  })}
 
   AddtoCart(data:any){
     console.log("data====> " , data.bookId);
@@ -69,6 +70,11 @@ export class GetbookbyIdComponent implements OnInit {
 
     this.getBook.addtocart(reqdata).subscribe((response:any)=>{
       console.log(response);
+      this.snack.open("added to cart ","" ,{
+        duration: 1000,
+      })
+      this.getbookid();
+      
     })
   }
 

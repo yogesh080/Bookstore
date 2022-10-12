@@ -41,6 +41,7 @@ import { AddressComponentComponent } from './components/address-component/addres
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { OrderSuccessMsgComponent } from './components/order-success-msg/order-success-msg.component';
 import { FilterPipePipe } from './Pipe/filter-pipe.pipe'; 
+import { AuthguardService } from './services/authService/authguard.service';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,9 @@ import { FilterPipePipe } from './Pipe/filter-pipe.pipe';
     FormsModule
     
   ],
-  providers: [],
+  providers: [
+    AuthguardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,7 +9,9 @@ import { DataServiceService } from 'src/app/services/dataService/data-service.se
 })
 export class DashboardComponent implements OnInit {
 
-  constructor( private dataService: DataServiceService) { }
+  show = true;
+
+  constructor( private dataService: DataServiceService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -18,6 +20,13 @@ export class DashboardComponent implements OnInit {
   {
       console.log("bookSearch",event.target.value)
       this.dataService.changeMessage(event.target.value)
+  }
+
+  logout(){
+    localStorage.removeItem("token")
+    this.router.navigateByUrl("/login")
+    console.log("logout sucessfully!!!");
+    this.show = false;
   }
 
 }

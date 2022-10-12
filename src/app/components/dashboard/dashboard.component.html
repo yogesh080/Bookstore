@@ -23,7 +23,9 @@
                         <mat-menu class="mat-menu" #menu="matMenu">
                             <h3><strong> Welcome </strong></h3>
                             <p> To access your account and manage Orders</p>
-                            <button class="mat-menu-signin" routerLink="/registration"> LOGIN/SIGNUP</button>
+                            <button *ngIf="show" class="mat-menu-signin" (click)="logout()"> LOGOUT</button>
+                            <button  *ngIf="!show" class="mat-menu-signin" routerLink="/login"> LOGIN </button>
+
                             <hr>
                             <button mat-menu-item >
                                 <mat-icon>collections_bookmark</mat-icon>

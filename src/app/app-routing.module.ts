@@ -13,14 +13,18 @@ import { OrderSuccessMsgComponent } from './components/order-success-msg/order-s
 import { RegistrationComponent } from './components/registration/registration.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
+
 const routes: Routes = [
   {path: 'registration', component:RegistrationComponent},
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+
   {path:'login', component:LoginComponent},
   {path:'forgetpassword', component:ForgetPasswordComponent},
   {path:'User/ResetPassword/:token', component:ResetPasswordComponent},
   {path:'adminlogin', component:AdminLoginComponent},
   {path:'dashboard', component:DashboardComponent,
   children:[
+    { path: '', redirectTo: '/dashboard/displaybook', pathMatch: 'full' },
     {path:'displaybook', component:GetAllBooksComponent  },
     {path:'wishlist', component:GetWishListComponent},
     {path:'book', component:GetbookbyIdComponent},

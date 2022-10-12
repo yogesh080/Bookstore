@@ -48,10 +48,13 @@ export class GetbookbyIdComponent implements OnInit {
 
   addwishlist(data:any){
     console.log("add wishlist")
-    console.log(data)
+    console.log(data);
+    let reqdata = {
+      BookId: data.bookId,
+    }
     
     console.log(data.bookId)
-    this.wishlist.addtoWishList(data.bookId).subscribe((response:any) => {
+    this.wishlist.addtoWishList(reqdata).subscribe((response:any) => {
       console.log(response)
     })
   }

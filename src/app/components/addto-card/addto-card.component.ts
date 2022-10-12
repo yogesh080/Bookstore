@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AddcartserviceService } from 'src/app/services/addcartService/addcartservice.service';
+import { AddressServiceService } from 'src/app/services/addressService/address-service.service';
 
 @Component({
   selector: 'app-addto-card',
@@ -9,14 +10,14 @@ import { AddcartserviceService } from 'src/app/services/addcartService/addcartse
 export class AddtoCardComponent implements OnInit {
 
   cartList: any;
-
   CardId: any;
   adqnt: any;
 
-  constructor(private cartlist: AddcartserviceService) { }
+  constructor(private cartlist: AddcartserviceService,private address: AddressServiceService) { }
 
   ngOnInit(): void {
     this.getallAddCard()
+
   }
 
   getallAddCard() {
@@ -64,38 +65,34 @@ export class AddtoCardComponent implements OnInit {
     }
   }
 
-qnt:any;
-lessQnt(data:any)
-{
-  this.qnt=data.bookQuantity;
-  this.qnt--;
-  data.bookQuantity=this.qnt;
+  qnt: any;
+  lessQnt(data: any) {
+    this.qnt = data.bookQuantity;
+    this.qnt--;
+    data.bookQuantity = this.qnt;
 
-  console.log(data.cartId,data.bookId,this.qnt);
-  if(this.qnt<=0)
-  {
-    data.bookQuantity=0;
+    console.log(data.cartId, data.bookId, this.qnt);
+    if (this.qnt <= 0) {
+      data.bookQuantity = 0;
+    }
+    else {
+      console.log(this.qnt);
+      console.log("this statement is write");
+
+      this.CardId = data.cartId;
+
+      let Data = {
+        BookQuantity: this.adqnt,
+        BookId: data.bookId,
+      }
+      console.log(Data);
+      console.log(this.CardId);
+
+      this.cartList.addUpdateCart(this.CardId, Data).subscribe((Request: any) => {
+        console.log(Request);
+      })
+
+    }
   }
-  else
-  {
-    console.log(this.qnt);
-    console.log("this statement is write");
-
-    this.CardId=data.cartId;
-
-    let Data={
-   BookQuantity:this.adqnt,
-   BookId:data.bookId,
- }
-   console.log(Data);
-   console.log(this.CardId);    
- 
-  this.cartList.addUpdateCart(this.CardId,Data).subscribe((Request:any)=>{
-    console.log(Request);
- })
-
-  }
-}
-
 
 }

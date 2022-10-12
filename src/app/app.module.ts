@@ -24,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http'
 
 
 
+
 import { RegistrationComponent } from './components/registration/registration.component';
 import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -38,7 +39,8 @@ import { GetbookbyIdComponent } from './components/getbookby-id/getbookby-id.com
 import { AddtoCardComponent } from './components/addto-card/addto-card.component';
 import { AddressComponentComponent } from './components/address-component/address-component.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { OrderSuccessMsgComponent } from './components/order-success-msg/order-success-msg.component'; 
+import { OrderSuccessMsgComponent } from './components/order-success-msg/order-success-msg.component';
+import { FilterPipePipe } from './Pipe/filter-pipe.pipe'; 
 
 @NgModule({
   declarations: [
@@ -55,7 +57,8 @@ import { OrderSuccessMsgComponent } from './components/order-success-msg/order-s
     GetbookbyIdComponent,
     AddtoCardComponent,
     AddressComponentComponent,
-    OrderSuccessMsgComponent
+    OrderSuccessMsgComponent,
+    FilterPipePipe
   ],
   imports: [
     BrowserModule,

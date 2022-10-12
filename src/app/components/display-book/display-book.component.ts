@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataServiceService } from 'src/app/services/dataService/data-service.service';
 
 @Component({
   selector: 'app-display-book',
@@ -10,9 +11,20 @@ export class DisplayBookComponent implements OnInit {
 
   @Input() BookArray:any;
 
-  constructor(private route:Router) { }
+  Search:any = '';
+
+  constructor(private route:Router, private dataservice: DataServiceService ) { }
 
   ngOnInit(): void {
+
+    // console.log("Get all books", this.BookArray)
+
+    this.dataservice.currentMessage.subscribe(message => {
+      console.log("display====>",message)
+      this.Search = message
+
+      
+    })
 
     console.log("Get all books", this.BookArray)
   }

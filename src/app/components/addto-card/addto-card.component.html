@@ -41,7 +41,7 @@
                 <mat-card-title>Order Summary</mat-card-title>
             </mat-card>
             <div *ngFor="let book of cartList">
-                <mat-card  class="booklist" style=" margin-bottom: 74px;">
+                <mat-card  class="booklist">
                     <div class="" fxLayout="row">
                         <img width="60px" src="{{book.bookImage}}" alt="">
                         <div class="bookname">
@@ -53,8 +53,8 @@
                             </div>
                         </div>
                     </div>
-                    <button mat-raised-button color="primary" class="primary-btn">CHECKOUT</button>
                 </mat-card>
             </div> 
+            <button mat-raised-button color="primary" class="primary-btn">CHECKOUT</button>
     </div>
 </div>

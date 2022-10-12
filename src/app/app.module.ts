@@ -37,7 +37,8 @@ import { GetWishListComponent } from './components/get-wish-list/get-wish-list.c
 import { GetbookbyIdComponent } from './components/getbookby-id/getbookby-id.component';
 import { AddtoCardComponent } from './components/addto-card/addto-card.component';
 import { AddressComponentComponent } from './components/address-component/address-component.component';
-import {MatSnackBarModule} from '@angular/material/snack-bar'; 
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { OrderSuccessMsgComponent } from './components/order-success-msg/order-success-msg.component'; 
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     GetWishListComponent,
     GetbookbyIdComponent,
     AddtoCardComponent,
-    AddressComponentComponent
+    AddressComponentComponent,
+    OrderSuccessMsgComponent
   ],
   imports: [
     BrowserModule,

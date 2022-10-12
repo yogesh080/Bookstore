@@ -79,3 +79,35 @@
 .header-btn{
     margin-left: 10%;
 }
+
+@media (max-width: 600px) {
+  .search-area {
+    margin-left: 39px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .example-spacer{
+    display: none;
+  }
+
+  .logo{
+    margin-left: 0%;
+  }
+
+  .header-icon{
+    font-size: 45px;
+    background-color: rgb(165, 29, 29);
+    border-top-width: 0px;
+    border-right-width: 1px;
+    border-bottom-width: 0px;
+    border-left-width: 1px;
+    border-color: #0000001a;
+}
+mat-toolbar-row{
+  padding: 0px 0px 0px 17px;
+}
+.header-btn{
+  margin-left: 0%;
+}
+}

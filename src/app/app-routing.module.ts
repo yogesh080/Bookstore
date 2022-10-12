@@ -9,6 +9,7 @@ import { GetAllBooksComponent } from './components/get-all-books/get-all-books.c
 import { GetWishListComponent } from './components/get-wish-list/get-wish-list.component';
 import { GetbookbyIdComponent } from './components/getbookby-id/getbookby-id.component';
 import { LoginComponent } from './components/login/login.component';
+import { OrderSuccessMsgComponent } from './components/order-success-msg/order-success-msg.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
@@ -23,7 +24,8 @@ const routes: Routes = [
     {path:'displaybook', component:GetAllBooksComponent  },
     {path:'wishlist', component:GetWishListComponent},
     {path:'book', component:GetbookbyIdComponent},
-    {path:'cart', component:AddtoCardComponent}
+    {path:'cart', component:AddtoCardComponent},
+    {path:'orderplaced', component:OrderSuccessMsgComponent}
   ]}
 ];
 

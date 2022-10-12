@@ -1,88 +1,82 @@
-.title{
-    width: 78%;
-    margin-left: 7%;
-    border-radius: 0px
-
+.title {
+  width: 78%;
+  margin-left: 7%;
+  border-radius: 0px;
 }
 
-.bookwishlist{
-    margin-top: 8px;
-    margin-left: 4px
+.bookwishlist {
+  margin-top: 8px;
+  margin-left: 4px;
 }
 
-.header{
-    margin-top: 2%;
-    margin-left: 7%;
+.header {
+  margin-top: 2%;
+  margin-left: 7%;
 }
 
-.booklist{
-    background-color: white;
-    width: 78%;
-    margin-left: 7%;
-    border-radius: 0px
+.booklist {
+  background-color: white;
+  width: 78%;
+  margin-left: 7%;
+  border-radius: 0px;
 }
 
-.bookname{
-    margin-left: 6%;
+.bookname {
+  margin-left: 6%;
 }
 
-.book-title{
-    font-size: 17px;
+.book-title {
+  font-size: 17px;
 }
-.author{
-    font-size: 15px;
-    color: rgba(0, 0, 0, 0.479);
+.author {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.479);
 }
-.price{
-    margin-top: 2px;
-}
-
-.discountedprice{
-    text-decoration: line-through;
-    padding: 2px;
-    margin-left: 8px;
+.price {
+  margin-top: 2px;
 }
 
-.round-btn{
-    border-radius: 50%;
-    border: solid #80808082 1px;
-    width: 4%;
-    height: 23px;
-}
-.display-btn{
-    margin: 0px 6px 0px 6px;
+.discountedprice {
+  text-decoration: line-through;
+  padding: 2px;
+  margin-left: 8px;
 }
 
-.count-btn{
-    margin-left: 15%;
+.round-btn {
+  border-radius: 50%;
+  border: solid #80808082 1px;
+  width: 4%;
+  height: 23px;
+}
+.display-btn {
+  margin: 0px 6px 0px 6px;
 }
 
-.remove-btn{
-    margin-left: 8%;
-    background-color: white;
-    border: none;
+.count-btn {
+  margin-left: 15%;
 }
 
-.address-container{
-    width: 78%;
-    margin-left: 7%;
-
+.remove-btn {
+  margin-left: 8%;
+  background-color: white;
+  border: none;
 }
 
-.primary-btn{
-    height:32px ;
-    margin-left: 81%;
-    position: relative;
-    // float:right;
+.address-container {
+  width: 78%;
+  margin-left: 7%;
 }
 
+.primary-btn {
+  margin: 14px;
+  height: 33px;
+  margin-left: 73%;
+  position: relative;
+}
 
-@media(max-width:572px){
-
-    .primary-btn{
-    margin-left: 0px;
+@media (max-width: 572px) {
+  .primary-btn {
+    margin-left: 35px;
     margin-top: 10px;
-
-    }
-    
-} 
+  }
+}

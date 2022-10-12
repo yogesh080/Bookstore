@@ -9,14 +9,14 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class AddcartserviceService {
 
-  token:any;
+  token: any;
 
-  constructor(private httpService: HttpServiceService) { 
+  constructor(private httpService: HttpServiceService) {
     this.token = localStorage.getItem("token")
   }
 
-  getallAddCarts(){
-    this.token= localStorage.getItem('token')
+  getallAddCarts() {
+    this.token = localStorage.getItem('token')
     console.log("addcart service")
 
     let header = {
@@ -32,7 +32,7 @@ export class AddcartserviceService {
   }
 
 
-  deleteCard(CardId:any){
+  deleteCard(CardId: any) {
 
     console.log(CardId);
 
@@ -45,6 +45,20 @@ export class AddcartserviceService {
 
     }
     return this.httpService.deleteservices(`/AddCart/DeleteFromCart?CartId=${CardId}`, true, header);
+
+  }
+
+  addUpdateCart(CartId: any, reqdata: any) {
+
+    console.log("ID", CartId, "ReqData", reqdata);
+
+    let headers = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': "Bearer " + this.token
+      })
+    }
+    return this.httpService.putservices('/AddCart/UpdateCart', reqdata, true, headers);
 
   }
 }

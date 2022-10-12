@@ -33,3 +33,19 @@ textarea{
     color: #333232;
     margin-top: 10px;
     }
+
+
+    @media(max-width:572px){
+
+        .mainadd {
+            display:block;
+          }
+
+          .rightadd {
+            margin-top: 10px;
+            margin-left: 19px;
+        }
+
+        
+        
+    }     

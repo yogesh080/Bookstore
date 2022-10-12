@@ -5,6 +5,7 @@ import { WishlistserviceService } from 'src/app/services/wishListServices/wishli
 
 
 
+
 @Component({
   selector: 'app-getbookby-id',
   templateUrl: './getbookby-id.component.html',
@@ -18,10 +19,8 @@ export class GetbookbyIdComponent implements OnInit {
   getbook:any;
   totalRating:any;
   comment:any;
-  booksArr:any;
+  booksArray:any;
 
-
-  
 
   constructor(private getBook: BookserviceService, private wishlist: WishlistserviceService, private snack: MatSnackBar) { }
 
@@ -86,7 +85,7 @@ export class GetbookbyIdComponent implements OnInit {
         console.log('User Feedback', response);
   
         this.snack.open('add feedback  Successfull', '', {
-          duration: 3000,
+          duration: 2000,
         })
         this.getFeedback();
       },
@@ -105,8 +104,8 @@ export class GetbookbyIdComponent implements OnInit {
     this.getBook.getfeedBack(this.Book).subscribe((response: any) => {
     
       console.log(response);
-      this.booksArr=response.data;
-      console.log(this.booksArr);
+      this.booksArray=response.data;
+      console.log(this.booksArray);
     });
   }
 

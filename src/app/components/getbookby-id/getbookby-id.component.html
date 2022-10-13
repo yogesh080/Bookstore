@@ -44,11 +44,11 @@
                             <div>
                                 <span class="star-cb-group">
                                     <input type="radio" id="rating-5" name="rating" value="5" [(ngModel)]="totalRating" /><label for="rating-5">5</label>
-                                    <input type="radio" id="rating-4" name="rating" value="4" checked="checked" [(ngModel)]="totalRating" /><label for="rating-4">4</label>
-                                    <input type="radio" id="rating-3" name="rating" value="3" /><label for="rating-3" [(ngModel)]="totalRating">3</label>
-                                    <input type="radio" id="rating-2" name="rating" value="2" /><label for="rating-2" [(ngModel)]="totalRating">2</label>
-                                    <input type="radio" id="rating-1" name="rating" value="1" /><label for="rating-1" [(ngModel)]="totalRating">1</label>
-                                    <input type="radio" id="rating-0" name="rating" value="0" class="star-cb-clear" [(ngModel)]="totalRating" /><label for="rating-0">0</label>
+                                    <input type="radio" id="rating-4" name="rating" value="4" [(ngModel)]="totalRating" /><label for="rating-4">4</label>
+                                    <input type="radio" id="rating-3" name="rating" value="3" [(ngModel)]="totalRating"/><label for="rating-3">3</label>
+                                    <input type="radio" id="rating-2" name="rating" value="2" [(ngModel)]="totalRating"/><label for="rating-2">2</label>
+                                    <input type="radio" id="rating-1" name="rating" value="1" [(ngModel)]="totalRating" /><label for="rating-1">1</label>
+                                    <input type="radio" id="rating-0" name="rating" value="0" [(ngModel)]="totalRating" class="star-cb-clear" /><label for="rating-0">0</label>
                                 </span>
                             </div>
                             <textarea class="feedbackarea" placeholder="Write a review "
@@ -59,18 +59,18 @@
                     <div fxLayout="row" *ngFor="let feedback of booksArray">
                         <img width="20px" width="20px"
                             src="../../../assets/assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg" alt="">
-                        <span class="profilename"></span>
+                        <span class="profilename">{{feedback.fullName}}</span>
                     </div>
-                    <div class="logofeedback">
-                        <img width="20px" src="../../../assets/assets/feedbackstar.svg" alt="">
-                        <img width="20px" src="../../../assets/assets/feedbackstar.svg" alt="">
-                        <img width="20px" src="../../../assets/assets/feedbackstar.svg" alt="">
-                        <img width="20px" src="../../../assets/assets/feedbackstar.svg" alt="">
-                        <img width="20px" src="../../../assets/assets/feedbackstar.svg" alt="">
+                    <div class="logofeedback" *ngFor="let feedback of booksArray">
+                        <span class="star-cb-group">
+                            <input type="radio" id="rating-5" name="rating" value="5" value="{{feedback.totalRating}}" /><label for="rating-5">5</label>
+                            <input type="radio" id="rating-4" name="rating" value="4" value="{{feedback.totalRating}}" /><label for="rating-4">4</label>
+                            <input type="radio" id="rating-3" name="rating" value="3" value="{{feedback.totalRating}}"/><label for="rating-3">3</label>
+                            <input type="radio" id="rating-2" name="rating" value="2" value="{{feedback.totalRating}}"/><label for="rating-2">2</label>
+                            <input type="radio" id="rating-1" name="rating" value="1" value="{{feedback.totalRating}}"/><label for="rating-1">1</label>
+                        </span>
+                        <p class="person-review">{{feedback.comment}}</p>
                     </div>
-                    <p class="person-review"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto nemo
-                        amet rem corporis consectetur reiciendis?Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Doloremque commodi et nulla iure numquam obcaecati.</p>
 
                 </div>
             </mat-card>

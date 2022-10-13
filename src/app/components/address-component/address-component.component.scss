@@ -3,11 +3,9 @@ input {
   border: solid 1px black;
   border-radius: 5px 5px 5px 5px;
 }
-textarea{
-    
-    width: 77%;
-    height: 100px;
-
+textarea {
+  width: 77%;
+  height: 100px;
 }
 .mainadd {
   display: flex;
@@ -23,29 +21,37 @@ textarea{
   margin-left: 90px;
 }
 
-.addresspart{
-    margin: 18px;
+.addresspart {
+  margin: 18px;
 }
 
-.radio{
-    margin-left: 11px;
-    font-size: 14px;
-    color: #333232;
+.radio {
+  margin-left: 11px;
+  font-size: 14px;
+  color: #333232;
+  margin-top: 10px;
+}
+
+.primary-btn {
+  background-color: rgb(40, 89, 185);
+  width: 4px;
+  width: 100px;
+  height: 28px;
+  color: white;
+  border: none;
+  margin-left: 3%;
+}
+.hidden-div {
+  display:none
+}
+
+@media (max-width: 572px) {
+  .mainadd {
+    display: block;
+  }
+
+  .rightadd {
     margin-top: 10px;
-    }
-
-
-    @media(max-width:572px){
-
-        .mainadd {
-            display:block;
-          }
-
-          .rightadd {
-            margin-top: 10px;
-            margin-left: 19px;
-        }
-
-        
-        
-    }     
+    margin-left: 19px;
+  }
+}

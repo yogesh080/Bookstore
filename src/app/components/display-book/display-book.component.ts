@@ -36,6 +36,18 @@ export class DisplayBookComponent implements OnInit {
     this.route.navigateByUrl('dashboard/book')
 
   }
+
+  lowtohigh(){
+    this.BookArray= this.BookArray.sort((low:any,high:any)=> low.discountedPrice-high.discountedPrice);
+    console.log("Low To Hight",this.BookArray);
+
+    }
+
+  hightolow(){
+    this.BookArray= this.BookArray.sort((low:any,high:any)=> high.discountedPrice-low.discountedPrice);
+    console.log("High To Loww",this.BookArray);
+ 
+  }
   
 
 }

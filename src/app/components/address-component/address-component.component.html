@@ -1,37 +1,37 @@
 <div>
     <mat-card-title class="add-title" style="margin-left: 2%;">Contact Address</mat-card-title>
 
-    <div class="mainadd">
+    <div class="mainadd" *ngFor="let user of UserArray">
 
         <div class="leftadd">
             <div class="addname">FullName</div>
-            <input type="text" placeholder="Enter Name" class="addresstext" value="" required />
+            <input type="text" placeholder="Enter Name" class="addresstext" value="{{user.fullName}}" required />
 
         </div>
 
         <div class="rightadd">
             <div class="addname">Mobile Number</div>
-            <input type="text" placeholder="Enter Number" class="addresstext" value="" required />
+            <input type="text" placeholder="Enter Number" class="addresstext" value="{{user.mobileNumber}}" />
         </div>
 
     </div><br>
 
-    <div class="addresspart">
+    <div class="addresspart" *ngFor="let user of UserArray">
         <div class="addwork">Work Address</div>
-        <textarea placeholder="Enter Address">  </textarea>
+        <textarea placeholder="Enter Address"> {{user.fullAddress}} </textarea>
     </div>
 
 
-    <div class="mainadd">
+    <div class="mainadd" *ngFor="let user of UserArray">
 
         <div class="leftadd">
-            <div class="addname">City Town</div>
-            <input type="text" placeholder="Enter City" class="addresstext" required />
+            <div class="addname">city/town</div>
+            <input type="text" placeholder="Enter City" value="{{user.city}}" class="addresstext" required />
         </div>
 
         <div class="rightadd">
             <div class="addname">State</div>
-            <input type="text" placeholder="Enter State" class="addresstext" required />
+            <input type="text" placeholder="Enter State" class="addresstext" value="{{user.state}}" required />
         </div>
     </div><br>
 
@@ -50,5 +50,8 @@
             <input type="radio"  id="other" name="type" value=3>
         </div>
 
+    </div>
+    <div class="btn-container">
+        <button *ngIf="toDisplay" (click)="Continue(OrderList.bookId, OrderList.quantity)" (click)="toggleData()" class="primary-btn" >CONTINUE</button>
     </div>
 </div>

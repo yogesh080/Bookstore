@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AddcartserviceService } from 'src/app/services/addcartService/addcartservice.service';
 import { AddressServiceService } from 'src/app/services/addressService/address-service.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { OrderServiceService } from 'src/app/services/addOrderService/order-service.service';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class AddtoCardComponent implements OnInit {
   CardId: any;
   adqnt: any;
 
-  constructor(private cartlist: AddcartserviceService,private address: AddressServiceService,private snackbar:MatSnackBar) { }
+  constructor(private cartlist: AddcartserviceService, private address: AddressServiceService, private snackbar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.getallAddCard()
@@ -38,13 +39,17 @@ export class AddtoCardComponent implements OnInit {
     console.log(data.cartId)
     this.cartlist.deleteCard(data.cartId).subscribe((response: any) => {
       console.log(response)
-      this.snackbar.open("Book Remove Successfully","" ,{
+      this.snackbar.open("Book Remove Successfully", "", {
         duration: 1000,
       });
       this.getallAddCard();
     })
 
   }
+
+  // checkout(){
+
+  // }
 
 
   addQnt(data: any) {
@@ -100,5 +105,36 @@ export class AddtoCardComponent implements OnInit {
 
     }
   }
+
+  // OrderList: any
+  // getallOrder() {
+  //   console.log("get add cart list")
+
+  //   this.getorder.AllOrder().subscribe((response: any) => {
+  //     console.log(response)
+  //     this.OrderList = response.data
+  //     console.log(this.OrderList)
+  //   })
+  // }
+
+
+  // addressId: any = 2;
+  // Continue(id: any, quantity: any) {
+  //   let reqdata = {
+  //     BookId: id,
+  //     Quantity: quantity,
+  //     AddressId: this.addressId,
+  //   }
+  //   console.log("order======>>", reqdata);
+  //   if (quantity > 0) {
+  //     this.getorder.PlaceOrder(reqdata).subscribe((Response: any) => {
+  //       console.log(Response);
+  //       this.snackbar.open("Book Ordered Successfully", "", {
+  //         duration: 2000,
+  //       });
+
+  //     })
+  //   }
+  // }
 
 }

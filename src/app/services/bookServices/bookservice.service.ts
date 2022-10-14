@@ -77,6 +77,18 @@ export class BookserviceService {
   }
 
 
+  deletefeed(FeedbackId:any){
+    let header={
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': "Bearer " + this.token
+      })
+    }
+    return this.httpService.deleteservices(`/AddFeedBack/DeleteFeedback?FeedbackId=${FeedbackId}`,true,header);
+
+  }
+
+
 
 
 

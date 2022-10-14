@@ -39,13 +39,14 @@ export class DisplayBookComponent implements OnInit {
 
   lowtohigh(){
     this.BookArray= this.BookArray.sort((low:any,high:any)=> low.discountedPrice-high.discountedPrice);
-    console.log("Low To Hight",this.BookArray);
+    console.log("Low To High",this.BookArray);
+
 
     }
 
   hightolow(){
     this.BookArray= this.BookArray.sort((low:any,high:any)=> high.discountedPrice-low.discountedPrice);
-    console.log("High To Loww",this.BookArray);
+    console.log("High To Low",this.BookArray);
  
   }
   

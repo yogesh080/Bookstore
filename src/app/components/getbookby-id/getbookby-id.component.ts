@@ -118,4 +118,12 @@ export class GetbookbyIdComponent implements OnInit {
     });
   }
 
+  
+  deleteFeedback(data:any){
+    console.log(data, "feedbackdelete====>",)
+    this.getBook.deletefeed(data.feedbackId).subscribe((response:any)  => {
+      console.log(response)
+    })
+  }
+
 }

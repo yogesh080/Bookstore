@@ -1,43 +1,44 @@
 <div class="header-container" fxLayout="column">
-    <div fxFlex="100" class="header" >
+    <div fxFlex="100" class="header">
         <div fxFlex="72" class="allbooks" fxLayout="row">
             <h2>Books</h2>
             <span class="booklength">({{BookArray.length}})</span>
         </div>
         <div class="sort">
-            <button class="sort-btn" mat-button [matMenuTriggerFor]="menu"><span class="span-sort"> Sort by relevence</span>
+            <button class="sort-btn" mat-button [matMenuTriggerFor]="menu"><span class="span-sort"> Sort by
+                    relevence</span>
                 <mat-icon>keyboard_arrow_down</mat-icon>
             </button>
             <mat-menu #menu="matMenu">
-                <button mat-menu-item (click)="lowtohigh()" >Low to high</button>
-                <button mat-menu-item (click)=" hightolow()" >High to low</button>
+                <button mat-menu-item (click)="lowtohigh()" value="one">Low to high</button>
+                <button mat-menu-item (click)=" hightolow()" value="two">High to low</button>
             </mat-menu>
         </div>
     </div>
-</div>
 
-<div>
-<div class="display-container" >
-    <div *ngFor="let book of BookArray | filterPipe : Search" fxFlex style="margin-right: 70px;">   
-        <mat-card  class="display">
-            <div class="book-img" fxLayoutAlign="space-around center">
-                <img width="140px" src="{{book.bookImage}}" alt="">
-            </div><br class="margin">
-            <div (click)="bookid(book)">
-                <mat-card-title class="book-title"> {{book.bookName}}</mat-card-title>
-                <mat-card-title class="author">By: {{book.author}}</mat-card-title>
-            </div>
 
-            <div class="rating" fxLayout="row">
-                <div class="badge">{{book.rating}}<img width="15px" style="margin-top: 1px;" src="../../../assets/assets/star.svg ">
-                </div>
-                <div style="color:black;margin-left: 4px;"> (20) </div>
+    <div>
+        <div class="display-container">
+            <div *ngFor="let book of BookArray | filterPipe : Search" fxFlex style="margin-right: 70px;">
+                <mat-card class="display">
+                    <div class="book-img" fxLayoutAlign="space-around center">
+                        <img width="140px" src="{{book.bookImage}}" alt="">
+                    </div><br class="margin">
+                    <div (click)="bookid(book)">
+                        <mat-card-title class="book-title"> {{book.bookName}}</mat-card-title>
+                        <mat-card-title class="author">By: {{book.author}}</mat-card-title>
+                    </div>
+
+                    <div class="rating" fxLayout="row">
+                        <div class="badge">{{book.rating}}<img width="15px" style="margin-top: 1px;"
+                                src="../../../assets/assets/star.svg ">
+                        </div>
+                        <div style="color:black;margin-left: 4px;"> ({{BookArray.ratingCount}}12) </div>
+                    </div>
+                    <div class="price"> <strong>Rs. {{book.price}} </strong><span class="discountedprice"> Rs.
+                            {{book.discountedPrice}} </span></div>
+                </mat-card>
             </div>
-            <div class="price"> <strong>Rs. {{book.price}} </strong><span class="discountedprice"> Rs. {{book.discountedPrice}} </span></div>
-        </mat-card>
+        </div>
     </div>
 </div>
-
-
-
-

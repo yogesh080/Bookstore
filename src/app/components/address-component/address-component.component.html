@@ -3,34 +3,34 @@
 
     <div class="mainadd" *ngFor="let user of UserArray">
 
-        <div class="leftadd">
-            <div class="addname">FullName</div>
+        <div >
+            <div style="margin-left: 23px;" class="addname">FullName</div>
             <input type="text" placeholder="Enter Name" class="addresstext" value="{{user.fullName}}" required />
 
         </div>
 
-        <div class="rightadd">
-            <div class="addname">Mobile Number</div>
+        <div >
+            <div style="margin-left: 23px;" class="addname">Mobile Number</div>
             <input type="text" placeholder="Enter Number" class="addresstext" value="{{user.mobileNumber}}" />
         </div>
 
     </div><br>
 
     <div class="addresspart" *ngFor="let user of UserArray">
-        <div class="addwork">Work Address</div>
+        <div  class="addwork">Work Address</div>
         <textarea placeholder="Enter Address"> {{user.fullAddress}} </textarea>
     </div>
 
 
     <div class="mainadd" *ngFor="let user of UserArray">
 
-        <div class="leftadd">
-            <div class="addname">city/town</div>
-            <input type="text" placeholder="Enter City" value="{{user.city}}" class="addresstext" required />
+        <div>
+            <div style="margin-left: 23px;" class="addname">city/town</div>
+            <input type="text" value="{{user.city}}" class="addresstext" required />
         </div>
 
-        <div class="rightadd">
-            <div class="addname">State</div>
+        <div>
+            <div style="margin-left: 23px;" class="addname">State</div>
             <input type="text" placeholder="Enter State" class="addresstext" value="{{user.state}}" required />
         </div>
     </div><br>
